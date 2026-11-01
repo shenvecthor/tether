@@ -1,5 +1,6 @@
 # Build output / IDE
 .gradle/
+.kotlin/
 build/
 captures/
 .idea/
