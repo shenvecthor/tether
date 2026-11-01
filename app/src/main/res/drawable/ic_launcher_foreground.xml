@@ -1,0 +1,11 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp" android:height="108dp"
+    android:viewportWidth="108" android:viewportHeight="108">
+    <!-- two pins leaning together with a little heart between -->
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M40,32c-7.2,0 -13,5.8 -13,13c0,9.8 13,22 13,22s13,-12.2 13,-22c0,-7.2 -5.8,-13 -13,-13zM40,50a5,5 0,1 1,0 -10a5,5 0,1 1,0 10z"/>
+    <path android:fillColor="#FFFFD9E5"
+        android:pathData="M68,32c-7.2,0 -13,5.8 -13,13c0,9.8 13,22 13,22s13,-12.2 13,-22c0,-7.2 -5.8,-13 -13,-13zM68,50a5,5 0,1 1,0 -10a5,5 0,1 1,0 10z"/>
+    <path android:fillColor="#FFFFFFFF"
+        android:pathData="M54,80l-1.2,-1.1C48.6,75.1 46,72.8 46,70c0,-2.3 1.8,-4 4,-4c1.3,0 2.5,0.6 3.3,1.5L54,68.3l0.7,-0.8C55.5,66.6 56.7,66 58,66c2.2,0 4,1.7 4,4c0,2.8 -2.6,5.1 -6.8,8.9L54,80z"/>
+</vector>

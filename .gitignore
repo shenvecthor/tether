@@ -1,0 +1,21 @@
+# Build output / IDE
+.gradle/
+build/
+captures/
+.idea/
+*.iml
+local.properties
+.DS_Store
+
+# Secrets — NEVER commit these
+app/google-services.json
+google-services.json
+app/keystore.properties
+keystore.properties
+*.jks
+*.keystore
+
+# Local update bundles
+.update-*.zip
+*.apk
+*.aab

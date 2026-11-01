@@ -1,0 +1,29 @@
+{
+  "rules": {
+    ".read": false,
+    ".write": false,
+    "circles": {
+      "$c": {
+        ".read": "auth != null && (root.child('circles').child($c).child('members').child('a').val() === auth.uid || root.child('circles').child($c).child('members').child('b').val() === auth.uid)",
+        ".write": "auth != null && (root.child('circles').child($c).child('members').child('a').val() === auth.uid || root.child('circles').child($c).child('members').child('b').val() === auth.uid)",
+        "members": {
+          "$slot": {
+            ".write": "auth != null && newData.val() === auth.uid && (($slot === 'a' && !data.exists()) || ($slot === 'b' && !data.exists() && root.child('circles').child($c).child('members').child('a').exists()) || (data.exists() && root.child('circles').child($c).child('tokens').child($slot).exists() && newData.parent().parent().child('proof').child($slot).val() === root.child('circles').child($c).child('tokens').child($slot).val()))",
+            ".validate": "newData.isString() && ($slot === 'a' || $slot === 'b')"
+          }
+        },
+        "tokens": {
+          "$slot": {
+            ".validate": "newData.isString() && newData.val().length >= 16 && ($slot === 'a' || $slot === 'b')"
+          }
+        },
+        "proof": {
+          "$slot": {
+            ".write": "auth != null",
+            ".validate": "newData.isString() && newData.val().length < 100 && ($slot === 'a' || $slot === 'b')"
+          }
+        }
+      }
+    }
+  }
+}
